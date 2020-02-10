@@ -1,0 +1,26 @@
+
+{% extends 'base.html'%}
+{% block content %}
+
+<div class="container">
+  <h2>Basic Table</h2>
+  <p>List of user who voted polls question:</p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Question Voter</th>
+        <th>User</th>
+      </tr>
+    </thead>
+    {% for Vote in voter %}
+    <tbody>
+      <tr>
+        <td>{{ Vote.question}}</td>
+        <td>{{ Vote.vote }}</td>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}
+
